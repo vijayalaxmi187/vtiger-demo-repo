@@ -16,11 +16,11 @@ public class ParametersTest {
     	 System.out.println(System.getProperty("browser"));
     	 String Browser = System.getProperty("browser");
 		 System.out.println(System.getProperty("url"));
-		 String Url = System.getProperty("url");
+		// String Url = System.getProperty("url");
 		 System.out.println(System.getProperty("username"));
-		 String Username = System.getProperty("username");
+		 //String Username = System.getProperty("username");
 		 System.out.println(System.getProperty("password"));
-		 String Password = System.getProperty("password");
+		// String Password = System.getProperty("password");
 		 
 		 WebDriver driver=null;
 		 
@@ -33,23 +33,22 @@ public class ParametersTest {
 			 System.out.println("supports only two browsers");
 			 }
 			 
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-			
-			driver.get(Url);
-			driver.findElement(By.name("user_name")).sendKeys(Username);
-	        driver.findElement(By.name("user_password")).sendKeys(Password);
-			driver.findElement(By.id("submitButton")).click();
-			
-			Actions action=new Actions(driver);
-			WebElement web = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
-			
-			action.moveToElement(web).perform();
-			
-			driver.findElement(By.linkText("Sign Out")).click();
-			driver.quit();
-			//http://localhost:8888/
-		
+				/*
+				 * driver.manage().window().maximize();
+				 * driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+				 * 
+				 * driver.get(Url); driver.findElement(By.name("user_name")).sendKeys(Username);
+				 * driver.findElement(By.name("user_password")).sendKeys(Password);
+				 * driver.findElement(By.id("submitButton")).click();
+				 * 
+				 * Actions action=new Actions(driver); WebElement web =
+				 * driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
+				 * 
+				 * action.moveToElement(web).perform();
+				 * 
+				 * driver.findElement(By.linkText("Sign Out")).click(); driver.quit();
+				 * 
+				 */		
 		 
 		 	}
 }
